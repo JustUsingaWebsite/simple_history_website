@@ -1,0 +1,79 @@
+body {
+    font-family: serif, sans-serif; /* Use a serif font for a classic feel */
+    margin: 0;
+    padding: 0;
+    background-color: #f0e8d8; /* Light sand color */
+    background-image: url("../pics/sandbackground.jpg");
+  }
+  
+  header.banner {
+    background-color: #c2b280; /* Dark sand color */
+    color: #fff; /* White text for contrast */
+    padding: 20px;
+    text-align: center; /* Center the banner text */
+    background-image: url("../pics/borderpic.webp");
+  }
+  
+  h1, h2 {
+    font-weight: bold;
+    margin-bottom: 10px; /* Add some space after headings */
+  }
+  
+  main.content {
+    padding: 10px;
+    max-width: 800px; /* Limit content width for better readability */
+    margin: 0 auto; /* Center the content horizontally */
+  }
+  
+  section {
+    margin-bottom: 20px;
+    border-bottom: none; /* Remove the divider line */
+  }
+  
+  p {
+    line-height: 1; /* Increase line spacing for better readability */
+  }
+  
+  img {
+    max-width: 100%; /* Ensure images scale proportionally */
+    margin-bottom: 10px; /* Add some space after images */
+  }
+  
+  /* Remove any footer styles you might have had here */
+  
+  .timeline-container {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap; /* Wrap rows to next line when full */
+  }
+  
+  .timeline-row {
+    display: flex; /* Arrange events horizontally */
+    margin-bottom: 20px; /* Add spacing between rows */
+    /* Limit the number of elements per row */
+    width: calc(100% / 4 * 4); /* 4 events per row (adjust as needed) */
+    position: relative; /* Needed for animation (optional) */
+    opacity: 0; /* Initially hidden (optional) */
+    transform: translateY(50px); /* Initially moved down (optional) */
+    transition: all 0.5s ease-in-out; /* Animation properties (optional) */
+  }
+  
+  .timeline-event {
+    background-color: #e0d6c7; /* Lighter sand color for events */
+    border-radius: 5px;
+    padding: 20px;
+    flex: 1 auto; /* Makes events shrink/grow to fill available space */
+    margin-right: 20px; /* Add spacing between events */
+  }
+  
+  .timeline-event:hover,
+  .timeline-event:focus {
+    background-color: #d7cebe; /* Even lighter sand color on hover */
+    cursor: pointer;
+  }
+  
+  .timeline-row.show {
+    opacity: 1;
+    transform: translateY(0); /* Animate to final position */
+  }
+  
